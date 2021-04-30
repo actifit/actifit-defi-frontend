@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Card, CardBody, Text, Flex, HelpIcon, Button, Heading, Skeleton, useModal } from '@pancakeswap-libs/uikit'
-import useI18n from 'hooks/useI18n'
+import { useTranslation } from 'contexts/Localization'
 import useRefresh from 'hooks/useRefresh'
 import useGetVaultFees from 'hooks/cakeVault/useGetVaultFees'
 import useGetVaultBountyInfo from 'hooks/cakeVault/useGetVaultBountyInfo'
@@ -19,7 +19,7 @@ const InlineText = styled(Text)`
 `
 
 const BountyCard = () => {
-  const TranslateString = useI18n()
+  const { t } = useTranslation()
   const { fastRefresh } = useRefresh()
   const { dollarCallBountyToDisplay, cakeCallBountyToDisplay, totalPendingCakeRewards } = useGetVaultBountyInfo(
     fastRefresh,
@@ -40,7 +40,7 @@ const BountyCard = () => {
         <Flex flexDirection="column">
           <Flex alignItems="center" mb="12px">
             <Text fontSize="16px" bold color="textSubtle" mr="4px">
-              {TranslateString(999, 'Auto CAKE Bounty')}
+              {t('Auto CAKE Bounty')}
             </Text>
             <HelpIcon color="textSubtle" />
           </Flex>
@@ -57,7 +57,7 @@ const BountyCard = () => {
             onClick={onPresentBountyModal}
             scale="sm"
           >
-            {TranslateString(999, 'Claim')}
+            {t('Claim')}
           </Button>
         </Flex>
       </CardBody>

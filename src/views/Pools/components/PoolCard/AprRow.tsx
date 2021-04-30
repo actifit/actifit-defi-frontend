@@ -1,6 +1,6 @@
 import React from 'react'
 import { Flex, Text, IconButton, useModal, CalculateIcon, Skeleton } from '@pancakeswap-libs/uikit'
-import useI18n from 'hooks/useI18n'
+import { useTranslation } from 'contexts/Localization'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { getPoolApr } from 'utils/apr'
 import { getAddress } from 'utils/addressHelpers'
@@ -19,7 +19,7 @@ interface AprRowProps {
 }
 
 const AprRow: React.FC<AprRowProps> = ({ pool, stakingTokenPrice, isAutoVault = false, compoundFrequency = 1 }) => {
-  const TranslateString = useI18n()
+  const { t } = useTranslation()
   const { stakingToken, earningToken, totalStaked, isFinished, tokenPerBlock } = pool
 
   const earningTokenPrice = useGetApiPrice(earningToken.address ? getAddress(earningToken.address) : '')
@@ -60,7 +60,7 @@ const AprRow: React.FC<AprRowProps> = ({ pool, stakingTokenPrice, isAutoVault = 
     <ApyCalculatorModal
       tokenPrice={earningTokenPrice}
       apr={apr}
-      linkLabel={`${TranslateString(999, 'Get')} ${stakingToken.symbol}`}
+      linkLabel={`${t('Get')} ${stakingToken.symbol}`}
       linkHref={apyModalLink || BASE_EXCHANGE_URL}
       earningTokenSymbol={earningToken.symbol}
       roundingDecimals={isHighValueToken ? 4 : 2}
@@ -70,7 +70,7 @@ const AprRow: React.FC<AprRowProps> = ({ pool, stakingTokenPrice, isAutoVault = 
 
   return (
     <Flex alignItems="center" justifyContent="space-between">
-      <Text>{isAutoVault ? TranslateString(999, 'APY') : TranslateString(736, 'APR')}:</Text>
+      <Text>{isAutoVault ? t('APY') : t('APR')}:</Text>
       {isFinished || !apr ? (
         <Skeleton width="82px" height="32px" />
       ) : (

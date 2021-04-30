@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
-import useI18n from 'hooks/useI18n'
+import { useTranslation } from 'contexts/Localization'
 import { Flex, CardFooter, ExpandableLabel } from '@pancakeswap-libs/uikit'
 import { Pool } from 'state/types'
 import { CompoundingPoolTag, ManualPoolTag } from 'components/Tags'
@@ -30,7 +30,7 @@ const Footer: React.FC<FooterProps> = ({
   isAutoVault = false,
   totalCakeInVault,
 }) => {
-  const TranslateString = useI18n()
+  const { t } = useTranslation()
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
@@ -38,7 +38,7 @@ const Footer: React.FC<FooterProps> = ({
       <ExpandableButtonWrapper>
         {isAutoVault ? <CompoundingPoolTag /> : <ManualPoolTag />}
         <ExpandableLabel expanded={isExpanded} onClick={() => setIsExpanded(!isExpanded)}>
-          {isExpanded ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')}
+          {isExpanded ? t('Hide') : t('Details')}
         </ExpandableLabel>
       </ExpandableButtonWrapper>
       {isExpanded && (

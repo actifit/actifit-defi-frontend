@@ -2,7 +2,7 @@ import React from 'react'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
 import { getBalanceNumber } from 'utils/formatBalance'
-import useI18n from 'hooks/useI18n'
+import { useTranslation } from 'contexts/Localization'
 import { Flex, MetamaskIcon, Text, LinkExternal, TimerIcon, Skeleton } from '@pancakeswap-libs/uikit'
 import { BASE_BSC_SCAN_URL, BASE_URL } from 'config'
 import { useBlock } from 'state/hooks'
@@ -33,7 +33,7 @@ const ExpandedFooter: React.FC<ExpandedFooterProps> = ({
   isAutoVault = false,
   totalCakeInVault,
 }) => {
-  const TranslateString = useI18n()
+  const { t } = useTranslation()
   const { currentBlock } = useBlock()
   const { stakingToken, earningToken, totalStaked, startBlock, endBlock, isFinished, contractAddress } = pool
 
@@ -51,7 +51,7 @@ const ExpandedFooter: React.FC<ExpandedFooterProps> = ({
   return (
     <ExpandedWrapper flexDirection="column">
       <Flex mb="2px" justifyContent="space-between" alignItems="center">
-        <Text small>{TranslateString(999, 'Total staked:')}</Text>
+        <Text small>{t('Total staked:')}</Text>
         <Flex alignItems="flex-start">
           {totalStaked ? (
             <>
@@ -74,7 +74,7 @@ const ExpandedFooter: React.FC<ExpandedFooterProps> = ({
       </Flex>
       {shouldShowBlockCountdown && (
         <Flex mb="2px" justifyContent="space-between" alignItems="center">
-          <Text small>{hasPoolStarted ? TranslateString(410, 'End') : TranslateString(1212, 'Start')}:</Text>
+          <Text small>{hasPoolStarted ? t('End') : t('Start')}:</Text>
           <Flex alignItems="center">
             {blocksRemaining || blocksUntilStart ? (
               <Balance
@@ -87,7 +87,7 @@ const ExpandedFooter: React.FC<ExpandedFooterProps> = ({
               <Skeleton width="54px" height="21px" />
             )}
             <Text ml="4px" color="primary" small>
-              {TranslateString(999, 'blocks')}
+              {t('blocks')}
             </Text>
             <TimerIcon ml="4px" color="primary" />
           </Flex>
@@ -95,7 +95,7 @@ const ExpandedFooter: React.FC<ExpandedFooterProps> = ({
       )}
       {isAutoVault && (
         <Flex mb="2px" justifyContent="space-between" alignItems="center">
-          <Text small>{TranslateString(999, 'Performance Fee')}</Text>
+          <Text small>{t('Performance Fee')}</Text>
           <Flex alignItems="center">
             <Text ml="4px" small>
               {performanceFee / 100}%
@@ -105,7 +105,7 @@ const ExpandedFooter: React.FC<ExpandedFooterProps> = ({
       )}
       <Flex mb="2px" justifyContent="flex-end">
         <LinkExternal bold={false} small href={earningToken.projectLink}>
-          {TranslateString(412, 'View Project Site')}
+          {t('View Project Site')}
         </LinkExternal>
       </Flex>
       {poolContractAddress && (
@@ -115,7 +115,7 @@ const ExpandedFooter: React.FC<ExpandedFooterProps> = ({
             small
             href={`${BASE_BSC_SCAN_URL}/address/${isAutoVault ? cakeVaultContractAddress : poolContractAddress}`}
           >
-            {TranslateString(412, 'View Contract')}
+            {t('View Contract')}
           </LinkExternal>
         </Flex>
       )}
