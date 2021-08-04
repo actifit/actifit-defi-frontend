@@ -74,9 +74,17 @@ const StarsWrapper = styled.div`
   }
 `
 
-const imagePath = '/images/home/actifit-bull/'
-const imageSrc = 'actifit-bull-var1'
+const imagePath = '/images/home/lunar-bunny/'
+const imageSrc = 'bunny'
 
+const starsImage: CompositeImageProps = {
+  path: '/images/home/lunar-bunny/',
+  attributes: [
+    { src: 'star-l', alt: '3D Star' },
+    { src: 'star-r', alt: '3D Star' },
+    { src: 'star-top-r', alt: '3D Star' },
+  ],
+}
 
 const Hero = () => {
   const { t } = useTranslation()
@@ -96,15 +104,15 @@ const Hero = () => {
       >
         <Flex flex="1" flexDirection="column">
           <Heading scale="xxl" color="secondary" mb="24px">
-            {t('Bringing Fitness, Blockchain & DeFi altogether.')}
+            {t('The moon is made of pancakes.')}
           </Heading>
-          <Heading scale="md" mb="24px" >
-            {t('Trade, earn, and win crypto on the fittest decentralized platform in the cryptosphere.')}
+          <Heading scale="md" mb="24px">
+            {t('Trade, earn, and win crypto on the most popular decentralized platform in the galaxy.')}
           </Heading>
           <Flex>
             {!account && <ConnectWalletButton mr="8px" />}
             <Link mr="16px" href="/swap">
-              <Button variant="tertiary">{t('Trade Now')}</Button>
+              <Button variant="secondary">{t('Trade Now')}</Button>
             </Link>
           </Flex>
         </Flex>
@@ -116,9 +124,11 @@ const Hero = () => {
           position="relative"
         >
           <BunnyWrapper>
-            <img src={`${imagePath}${imageSrc}.png`} alt={t('Actifit DeFi Bull')} />
+            <img src={`${imagePath}${imageSrc}.png`} srcSet={getSrcSet(imagePath, imageSrc)} alt={t('Lunar bunny')} />
           </BunnyWrapper>
-
+          <StarsWrapper>
+            <CompositeImage {...starsImage} />
+          </StarsWrapper>
         </Flex>
       </Flex>
     </>
