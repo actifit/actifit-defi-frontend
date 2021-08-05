@@ -33,6 +33,9 @@ export const BUSD: { [chainId: number]: Token } = {
   ),
 }
 
+export const AFITX = new Token(ChainId.MAINNET, '0x246d22ff6e0b90f80f2278613e8db93ff7a09b95', 18, 'AFITX', 'Actifit DeFi Governance Token')
+export const AFIT = new Token(ChainId.MAINNET, '0x4516bb582f59befcbc945d8c2dac63ef21fba9f6', 18, 'AFIT', 'Actifit Token')
+
 export const WBNB = new Token(ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB')
 export const DAI = new Token(ChainId.MAINNET, '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3', 18, 'DAI', 'Dai Stablecoin')
 export const USDT = new Token(ChainId.MAINNET, '0x55d398326f99059fF775485246999027B3197955', 18, 'USDT', 'Tether USD')
@@ -63,6 +66,24 @@ const tokens = {
   bnb: {
     symbol: 'BNB',
     projectLink: 'https://www.binance.com/',
+  },
+  afitx: {
+    symbol: 'AFITX',
+    address: {
+      56: '0x246d22ff6e0b90f80f2278613e8db93ff7a09b95',
+      97: '',
+    },
+    decimals: 18,
+    projectLink: 'https://defi.actifit.io/',
+  },
+  afit: {
+    symbol: 'AFIT',
+    address: {
+      56: '0x4516bb582f59befcbc945d8c2dac63ef21fba9f6',
+      97: '',
+    },
+    decimals: 18,
+    projectLink: 'https://actifit.io',
   },
   cake: {
     symbol: 'CAKE',
