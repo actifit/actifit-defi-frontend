@@ -32,11 +32,20 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
     href: '/pools',
   },
   {
+    label: t('Fit Loans'),
+    icon: 'TicketIcon',
+    href: '/',
+    status: {
+      text: t('Soon').toLocaleUpperCase(),
+      color: 'success',
+    },
+  },
+  {
     label: t('Lottery'),
     icon: 'TicketIcon',
-    href: '/lottery',
+    href: '/',
     status: {
-      text: t('Win').toLocaleUpperCase(),
+      text: t('Soon').toLocaleUpperCase(),
       color: 'success',
     },
   },
@@ -44,6 +53,10 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
     label: t('Collectibles'),
     icon: 'NftIcon',
     href: '/',
+	status: {
+      text: t('Soon').toLocaleUpperCase(),
+      color: 'success',
+    },
   },
   {
     label: t('Info'),
