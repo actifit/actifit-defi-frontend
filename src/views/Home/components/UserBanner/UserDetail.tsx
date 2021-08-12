@@ -74,9 +74,6 @@ const UserDetail = () => {
   return (
     <>
       <Desktop>
-        <AvatarWrapper>
-          <Sticker>{profile ? <ProfileAvatar profile={profile} /> : <StyledNoProfileAvatarIcon />}</Sticker>
-        </AvatarWrapper>
         <Flex flexDirection="column">
           {getDesktopHeading()}
           {isLoading || !account ? (

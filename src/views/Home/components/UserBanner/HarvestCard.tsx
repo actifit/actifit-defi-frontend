@@ -28,7 +28,7 @@ const HarvestCard = () => {
   const earningsText = t('%earningsBusd% to collect from %count% %farms%', {
     earningsBusd: earningsBusd.toString(),
     count: numFarmsToCollect > 0 ? numFarmsToCollect : '',
-    farms: numFarmsToCollect === 0 || numFarmsToCollect > 1 ? 'farms' : 'farm',
+    farms: numFarmsToCollect === 0 || numFarmsToCollect > 1 ? 'workouts' : 'workout',
   })
   const [preText, toCollectText] = earningsText.split(earningsBusd.toString())
 
@@ -41,7 +41,7 @@ const HarvestCard = () => {
         await harvestFarm(masterChefContract, farmWithBalance.pid)
         toastSuccess(
           `${t('Harvested')}!`,
-          t('Your %symbol% earnings have been sent to your wallet!', { symbol: 'CAKE' }),
+          t('Your %symbol% earnings have been sent to your wallet!', { symbol: 'AFITX' }),
         )
       } catch (error) {
         toastError(t('Error'), t('Please try again. Confirm the transaction and make sure you are paying enough gas!'))
@@ -80,7 +80,7 @@ const HarvestCard = () => {
             <Link href="farms">
               <Button width={['100%', null, null, 'auto']} variant="secondary">
                 <Text color="primary" bold>
-                  {t('Farms')}
+                  {t('Workouts')}
                 </Text>
                 <ArrowForwardIcon ml="4px" color="primary" />
               </Button>
