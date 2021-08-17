@@ -1673,7 +1673,7 @@
     "@ethersproject/properties" "^5.4.0"
     "@ethersproject/transactions" "^5.4.0"
 
-"@ethersproject/experimental@^5.0.1":
+"@ethersproject/experimental@^5.4.0":
   version "5.4.0"
   resolved "https://registry.yarnpkg.com/@ethersproject/experimental/-/experimental-5.4.0.tgz#72c280dc4c981749f7ea0a9ecffd663c633a145e"
   integrity sha512-dy+AgxqRUwJ+8J6bIz062NL7a+Vv+zGP4geeN09nvNEMPzY/kPYQBV5RECRbFFCH0U5mASf5ZnuF1N2DIIaZ1g==
@@ -2603,10 +2603,9 @@
     tiny-warning "^1.0.3"
     toformat "^2.0.0"
 
-"@pancakeswap/uikit@^0.43.0":
+"@pancakeswap/uikit@./pancakeswap-uikit-0.43.0.tgz":
   version "0.43.0"
-  resolved "https://registry.yarnpkg.com/@pancakeswap/uikit/-/uikit-0.43.0.tgz#14cd17579e8b507b94ab5793181efad9389f1bed"
-  integrity sha512-TlYpZikSN0jpfDQw6uloqy14jyG/1hI808/yM5hhxGBK02st+1dkjLNy3NLgdHI+VleAAiAzJ7RQxh9YkGt/VA==
+  resolved "./pancakeswap-uikit-0.43.0.tgz#85441a4a4c4ba4c78af0e11e3bc9cf81d48202f0"
   dependencies:
     "@popperjs/core" "^2.9.2"
     "@types/lodash" "^4.14.168"
