@@ -94,14 +94,32 @@ const tokens = {
     decimals: 18,
     projectLink: 'https://pancakeswap.finance/',
   },
-  revv: {
-    symbol: 'REVV',
+  cub: {
+    symbol: 'CUB',
     address: {
-      56: '0x833f307ac507d47309fd8cdd1f835bef8d702a93',
+      56: '0x50d809c74e0b8e49e7b4c65bb3109abe3ff4c1c1',
       97: '',
     },
     decimals: 18,
-    projectLink: 'https://revvmotorsport.com/',
+    projectLink: 'https://cubdefi.com/',
+  },
+  banana: {
+    symbol: 'BANANA',
+    address: {
+      56: '0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95',
+      97: '',
+    },
+    decimals: 18,
+    projectLink: 'https://apeswap.finance/',
+  },
+  mdx: {
+    symbol: 'MDX',
+    address: {
+      56: '0x9c65ab58d8d978db963e63f2bfb7121627e3a739',
+      97: '',
+    },
+    decimals: 18,
+    projectLink: 'https://mdex.co/',
   },
   skill: {
     symbol: 'SKILL',

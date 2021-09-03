@@ -78,10 +78,9 @@ const farms: FarmConfig[] = [
       56: '0xffff75bb7bf133a9e98bc62665f20a84e152b689',
     },
     token: tokens.afit,
-    quoteToken: tokens.wbnb,
+    quoteToken: tokens.bnb,
   },
-  
-  {
+  /* {
     pid: 255,
     lpSymbol: 'AFIT-BUSD LP',
     lpAddresses: {
@@ -90,8 +89,8 @@ const farms: FarmConfig[] = [
     },
     token: tokens.afit,
     quoteToken: tokens.busd,
-  },
-   {
+  }, */
+  {
     pid: 256,
     lpSymbol: 'CAKE-BNB LP',
     lpAddresses: {
@@ -100,8 +99,8 @@ const farms: FarmConfig[] = [
     },
     token: tokens.cake,
     quoteToken: tokens.wbnb,
-   },
-   {
+  }, 
+  {
     pid: 257,
     lpSymbol: 'CAKE-USDT LP',
     lpAddresses: {
@@ -110,8 +109,8 @@ const farms: FarmConfig[] = [
     },
     token: tokens.cake,
     quoteToken: tokens.usdt,
-   },
-   {
+  },
+  {
     pid: 258,
     lpSymbol: 'CAKE-BUSD LP',
     lpAddresses: {
@@ -120,8 +119,8 @@ const farms: FarmConfig[] = [
     },
     token: tokens.cake,
     quoteToken: tokens.busd,
-   },
-   {
+  },
+  {
     pid: 259,
     lpSymbol: 'BANANA-BNB LP',
     lpAddresses: {
@@ -129,9 +128,9 @@ const farms: FarmConfig[] = [
       56: '0xF65C1C0478eFDe3c19b49EcBE7ACc57BB6B1D713',
     },
     token: tokens.banana,
-    quoteToken: tokens.wbnb,
-   },
-   {
+    quoteToken: tokens.bnb,
+  },
+  {
     pid: 260,
     lpSymbol: 'BANANA-BUSD LP',
     lpAddresses: {
@@ -141,7 +140,7 @@ const farms: FarmConfig[] = [
     token: tokens.banana,
     quoteToken: tokens.busd,
   },
-   {
+  {
     pid: 261,
     lpSymbol: 'WBNB-USDT LP',
     lpAddresses: {
@@ -150,9 +149,9 @@ const farms: FarmConfig[] = [
     },
     token: tokens.wbnb,
     quoteToken: tokens.usdt,
-	},
-   {
-    pid: 262,
+  },
+  {
+    pid: 266,
     lpSymbol: 'BUSD-MDX LP',
     lpAddresses: {
       97: '',

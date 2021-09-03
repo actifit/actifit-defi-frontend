@@ -97,7 +97,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, displayApr, removed, cakePric
   })
   const addLiquidityUrl = `${BASE_ADD_LIQUIDITY_URL}/${liquidityUrlPathParts}`
   const lpAddress = getAddress(farm.lpAddresses)
-  const isPromotedFarm = farm.token.symbol === 'CAKE'
+  const isPromotedFarm = (farm.token.symbol === 'AFITX' ) || (farm.token.symbol === 'AFIT' )
 
   return (
     <FCard isPromotedFarm={isPromotedFarm}>

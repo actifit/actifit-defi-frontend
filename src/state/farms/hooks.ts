@@ -104,6 +104,6 @@ export const usePriceCakeBusd = (): BigNumber => {
 }
 
 export const usePriceAFITBusd = (): BigNumber => {
-  const afitBnbFarm = useFarmFromPid(251)
+  const afitBnbFarm = useFarmFromPid(254)
   return new BigNumber(afitBnbFarm.token.busdPrice)
 }
