@@ -80,11 +80,11 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
       },
 	  {
         label: t('AFIT-BSCView'),
-        href: 'https://bscview.com/pair/0x4516bb582f59befcbc945d8c2dac63ef21fba9f6',
+        href: 'https://bscview.com/pair/0xffff75bb7bf133a9e98bc62665f20a84e152b689',
       },
       {
         label: t('AFITX-BSCView'),
-        href: 'https://bscview.com/pair/0x246d22ff6e0b90f80f2278613e8db93ff7a09b95',
+        href: 'https://bscview.com/pair/0x150c81246df4e31847a613e18cab5ef601ca265a',
       },
 	  {
         label: t('AFIT-Poocoin'),
