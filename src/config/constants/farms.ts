@@ -79,8 +79,7 @@ const farms: FarmConfig[] = [
     },
     token: tokens.afit,
     quoteToken: tokens.wbnb,
-  },
-  
+  },  
   {
     pid: 255,
     lpSymbol: 'AFIT-BUSD LP',
