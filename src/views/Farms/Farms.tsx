@@ -450,7 +450,7 @@ const Farms: React.FC = () => {
           </Flex>
         )}
         <div ref={loadMoreRef} />
-        <StyledImage src="/images/decorations/Bull-Icon-Small.png" alt="Pancake illustration" width={200} height={255} />
+        <StyledImage src="/images/decorations/Bull-Workout-Small.png" alt="Pancake illustration" width={250} height={268} />
       </Page>
     </>
   )

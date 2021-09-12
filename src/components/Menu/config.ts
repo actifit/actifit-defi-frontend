@@ -78,13 +78,29 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
         label: t('Coinmarketcap'),
         href: 'https://coinmarketcap.com/currencies/actifit/',
       },
+	  {
+        label: t('AFIT-BSCView'),
+        href: 'https://bscview.com/pair/0x4516bb582f59befcbc945d8c2dac63ef21fba9f6',
+      },
       {
-        label: t('AFIT-Astrotools'),
-        href: 'https://app.astrotools.io/pancake-pair-explorer/0x4516bb582f59befcbc945d8c2dac63ef21fba9f6',
+        label: t('AFITX-BSCView'),
+        href: 'https://bscview.com/pair/0x246d22ff6e0b90f80f2278613e8db93ff7a09b95',
+      },
+	  {
+        label: t('AFIT-Poocoin'),
+        href: 'https://poocoin.app/tokens/0x4516bb582f59befcbc945d8c2dac63ef21fba9f6',
       },
       {
         label: t('AFITX-Astrotools'),
-        href: 'https://app.astrotools.io/pancake-pair-explorer/0x246d22ff6e0b90f80f2278613e8db93ff7a09b95',
+        href: 'https://poocoin.app/tokens/0x246d22ff6e0b90f80f2278613e8db93ff7a09b95',
+      },
+	  {
+        label: t('AFIT-Goswapp'),
+        href: 'https://goswapp-bsc.web.app/0x4516bb582f59befcbc945d8c2dac63ef21fba9f6',
+      },
+      {
+        label: t('AFITX-Goswapp'),
+        href: 'https://goswapp-bsc.web.app/0x246d22ff6e0b90f80f2278613e8db93ff7a09b95',
       },
     ],
   },
@@ -104,10 +120,10 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
         label: t('Blog'),
         href: 'https://hive.blog/@actifit',
       },
-	  {
+	  /* {
         label: t('Contact'),
         href: 'mailto:info@actifit.io',
-      },
+      }, */
       {
         label: t('BSC Scan AFIT'),
         href: 'https://bscscan.com/token/0x4516bb582f59befcbc945d8c2dac63ef21fba9f6',
