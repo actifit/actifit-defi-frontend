@@ -91,7 +91,7 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
         href: 'https://poocoin.app/tokens/0x4516bb582f59befcbc945d8c2dac63ef21fba9f6',
       },
       {
-        label: t('AFITX-Astrotools'),
+        label: t('AFITX-Poocoin'),
         href: 'https://poocoin.app/tokens/0x246d22ff6e0b90f80f2278613e8db93ff7a09b95',
       },
 	  {
