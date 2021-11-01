@@ -24,12 +24,22 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
   {
     label: t('Workouts'),
     icon: 'FarmIcon',
-    href: '/farms',
+    // href: '/farms',
+	href: '/',
+	status: {
+      text: t('Soon').toLocaleUpperCase(),
+      color: 'success',
+    },
   },
   {
     label: t('Shakes'),
     icon: 'PoolIcon',
-    href: '/pools',
+    // href: '/pools',
+	href: '/',
+	status: {
+      text: t('Soon').toLocaleUpperCase(),
+      color: 'success',
+    },
   },
   {
     label: t('Fit Loans'),
