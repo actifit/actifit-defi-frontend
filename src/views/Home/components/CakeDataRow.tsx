@@ -53,7 +53,11 @@ const CakeDataRow = () => {
   const mcapString = formatLocalisedCompactNumber(mcap.toNumber())
 
   return (
-    <Grid>
+    
+	
+	
+	<Grid>
+	{/*
       <Flex flexDirection="column">
         <Text color="textSubtle">{t('Total supply')}</Text>
         {cakeSupply ? (
@@ -69,12 +73,15 @@ const CakeDataRow = () => {
         ) : (
           <Skeleton height={24} width={126} my="4px" />
 			)}
+			
+*/}
+		
 		{ /* <!-- {cakePriceBusd ? (
           <Text>{t('%cakePriceBusdd%', { cakePriceBusdd: cakePriceBusd.toString() })}</Text>
         ) : (
           <Skeleton height={24} width={126} my="4px" />
         )} --> */ }
-		
+		{/*
       </StyledColumn>
       <StyledColumn noMobileBorder>
         <Text color="textSubtle">{t('Market cap')}</Text>
@@ -89,7 +96,9 @@ const CakeDataRow = () => {
 
         <Heading scale="lg">{t('%cakeEmissions%/block', { cakeEmissions: emissionsPerBlock })}</Heading>
       </StyledColumn>
+*/}
     </Grid>
+	
   )
 }
 
