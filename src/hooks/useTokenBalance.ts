@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import BigNumber from 'bignumber.js'
 import { useWeb3React } from '@web3-react/core'
-import { getBep20Contract, getCakeContract } from 'utils/contractHelpers'
+import { getBep20Contract, getCakeContract, getAfitContract } from 'utils/contractHelpers'
 import { BIG_ZERO } from 'utils/bigNumber'
 import { simpleRpcProvider } from 'utils/providers'
 import useRefresh from './useRefresh'
@@ -29,7 +29,7 @@ const useTokenBalance = (tokenAddress: string) => {
 
   useEffect(() => {
     const fetchBalance = async () => {
-      const contract = getBep20Contract(tokenAddress)
+      const contract = getAfitContract()
       try {
         const res = await contract.balanceOf(account)
         setBalanceState({ balance: new BigNumber(res.toString()), fetchStatus: SUCCESS })
@@ -65,6 +65,23 @@ export const useTotalSupply = () => {
   }, [slowRefresh])
 
   return totalSupply
+}
+
+export const useAfitSupply = () => {
+  const { slowRefresh } = useRefresh()
+  const [totalAfitSupply, setTotalAfitSupply] = useState<BigNumber>()
+
+  useEffect(() => {
+    async function fetchTotalSupply() {
+      const cakeContract = getAfitContract()
+      const supply = await cakeContract.totalSupply()
+      setTotalAfitSupply(new BigNumber(supply.toString()))
+    }
+
+    fetchTotalSupply()
+  }, [slowRefresh])
+
+  return totalAfitSupply
 }
 
 export const useBurnedBalance = (tokenAddress: string) => {
