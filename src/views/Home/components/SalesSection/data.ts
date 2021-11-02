@@ -35,7 +35,8 @@ export const earnSectionData: SalesSectionProps = {
   bodyText: 'Actifit DeFi makes it easy to make your crypto work for you.',
   reverse: true,
   primaryButton: {
-    to: '/farms',
+    // to: '/farms',
+	to: '/',
     text: 'Explore',
     external: false,
   },
