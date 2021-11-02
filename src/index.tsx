@@ -1,5 +1,6 @@
 import React, { useMemo, ReactNode } from 'react'
 import ReactDOM from 'react-dom'
+import ReactGA from 'react-ga';
 import useActiveWeb3React from './hooks/useActiveWeb3React'
 import { BLOCKED_ADDRESSES } from './config/constants'
 import ApplicationUpdater from './state/application/updater'
@@ -8,6 +9,10 @@ import MulticallUpdater from './state/multicall/updater'
 import TransactionUpdater from './state/transactions/updater'
 import App from './App'
 import Providers from './Providers'
+
+
+const TRACKING_ID = "G-Q4WH0Y5Z3F";
+ReactGA.initialize(TRACKING_ID);
 
 function Updaters() {
   return (
