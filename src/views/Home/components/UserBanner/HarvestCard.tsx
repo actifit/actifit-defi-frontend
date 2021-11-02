@@ -76,8 +76,12 @@ const HarvestCard = () => {
               {toCollectText}
             </Text>
           </Flex>
+		  { /* TODO: restore farms link 
+			<Link href="farms">
+			*/ }
           {numFarmsToCollect <= 0 ? (
-            <Link href="farms">
+			  
+			<Link href="/">
               <Button width={['100%', null, null, 'auto']} variant="secondary">
                 <Text color="primary" bold>
                   {t('Workouts')}
