@@ -30,7 +30,7 @@ const farms: FarmConfig[] = [
     pid: 0,
     lpSymbol: 'AFITX',
     lpAddresses: {
-      97: '',
+      97: '0x79a15D50F6b6e9351da6c60927031bE7554692F3',
       56: '0x246d22ff6e0b90f80f2278613e8db93ff7a09b95',
     },
     token: tokens.syrup,
@@ -60,7 +60,7 @@ const farms: FarmConfig[] = [
   /**
    * V3 by order of release (some may be out of PID order due to multiplier boost)
    */
-  {
+  /* {
     pid: 253,
     lpSymbol: 'AFITX-BUSD LP',
     lpAddresses: {
@@ -69,18 +69,18 @@ const farms: FarmConfig[] = [
     },
     token: tokens.afitx,
     quoteToken: tokens.busd,
-  },
+  }, */
   {
     pid: 254,
     lpSymbol: 'AFIT-BNB LP',
     lpAddresses: {
-      97: '',
+      97: '0x943d222216b742Aa122CA740CdbaAEB405409b09',
       56: '0xffff75bb7bf133a9e98bc62665f20a84e152b689',
     },
     token: tokens.afit,
     quoteToken: tokens.wbnb,
   },  
-  {
+  /* {
     pid: 255,
     lpSymbol: 'AFIT-BUSD LP',
     lpAddresses: {
@@ -89,7 +89,7 @@ const farms: FarmConfig[] = [
     },
     token: tokens.afit,
     quoteToken: tokens.busd,
-  },
+  }, */
    {
     pid: 256,
     lpSymbol: 'CAKE-BNB LP',
@@ -139,7 +139,7 @@ const farms: FarmConfig[] = [
     },
     token: tokens.banana,
     quoteToken: tokens.busd,
-  },
+   },
    {
     pid: 261,
     lpSymbol: 'WBNB-USDT LP',
@@ -159,7 +159,28 @@ const farms: FarmConfig[] = [
     },
     token: tokens.mdx,
     quoteToken: tokens.busd,
-  },
+   },
+   {
+    pid: 263,
+    lpSymbol: 'CUB-BUSD LP',
+    lpAddresses: {
+      97: '',
+      56: '0xfdF68922460d7508f84bD55ACB9D276d3f9a2c31',
+    },
+    token: tokens.cub,
+    quoteToken: tokens.busd,
+   },
+   {
+    pid: 264,
+    lpSymbol: 'CUB-BNB LP',
+    lpAddresses: {
+      97: '',
+      56: '0x7BaE0d7D2760E681559fbb502b43fFA26561bA24',
+    },
+    token: tokens.cub,
+    quoteToken: tokens.wbnb,
+   },
+  
 ]
 
 export default farms
